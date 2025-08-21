@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  .scroll-fixed-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  
+  .scroll-overlay-page {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+  }
+  .scroll-overlay-page2 {
+    position: relative;
+    z-index: 2;
+  }
+
