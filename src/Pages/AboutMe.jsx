@@ -18,7 +18,7 @@ relative scroll-overlay-page min-h-screen'>
         justify-center items-start  flex-col pl-20 pr-5
         '>
 
-  <h2 className='text-xl text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3 rounded-full'>About</h2>
+  <h2 className='text-xl text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3 rounded-full'>About Me</h2>
   
 
           <p className='text-lg'>
