@@ -1,6 +1,6 @@
 import React from 'react'
 import { Code, Palette, Database, Globe } from "lucide-react";
-
+import { motion } from "framer-motion";
 
 
 
@@ -41,9 +41,13 @@ relative scroll-overlay-page2 min-h-screen py-20
     '>
 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <motion.h2 
+           whileInView={{opacity:1,y:0}}
+  initial={{opacity:0,y:-100}}
+  transition={{duration:0.5}}
+          className="text-4xl md:text-5xl font-bold text-white mb-4">
             My Skills
-          </h2>
+          </motion.h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>

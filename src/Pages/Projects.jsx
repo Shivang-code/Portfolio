@@ -5,7 +5,7 @@ import fourthImg from "../assets/picture/florian-klauer-mk7D-4UCfmg-unsplash.jpg
 import fifthImg from "../assets/picture/mark-adriane-muS2RraYRuQ-unsplash.jpg"
 import sixthImg from "../assets/picture/raimond-klavins-uAk731NvaJo-unsplash.jpg"
 import ProjectCards from "../Components/ProjectCards";
-
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -55,12 +55,17 @@ const myProjects = [
     <section 
     id="projects"
     className='bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800 text-white
-relative scroll-overlay-page2 min-h-screen'>
+relative scroll-overlay-page2 min-h-screen pt-20'>
       
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 pt-7">
+          <motion.h2 
+                    whileInView={{opacity:1,y:0}}
+  initial={{opacity:0,y:-100}}
+  transition={{duration:1}}
+          
+          className="text-4xl md:text-5xl font-bold text-white mb-4 pt-7">
             Projects
-          </h2>
+          </motion.h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Projects I have worked on and am currently working on.
           </p>
