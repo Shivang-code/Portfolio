@@ -89,7 +89,7 @@ relative scroll-overlay-page2 min-h-screen pt-20'>
       slidesPerView: 3,
     },
     1280: { // large desktops
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
   }}
       >
