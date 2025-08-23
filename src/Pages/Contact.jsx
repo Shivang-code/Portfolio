@@ -7,7 +7,7 @@ function Contact() {
   return (
      <section id='contact'
      className='bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800
-relative scroll-overlay-page2 min-h-screen py-20
+relative scroll-overlay-page2 min-h-screen py-20 
     '>
 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">

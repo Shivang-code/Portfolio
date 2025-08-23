@@ -22,7 +22,9 @@ function ProjectCards({ src, Title, Content }) {
 
       {/* Text overlay (only when hovered) */}
       {hovered && (
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black/40 px-4">
+        <div className="absolute inset-0 flex flex-col text-white bg-black/40 px-4
+        justify-end py-6 transition duration-300
+        ">
           <h3 className="text-2xl font-bold">{Title}</h3>
           <p className="text-lg mt-2">{Content}</p>
         </div>

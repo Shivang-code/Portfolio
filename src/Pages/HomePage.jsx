@@ -19,7 +19,11 @@ function HomePage() {
   };
   return (
 
-    <section 
+    <motion.section 
+    whileInView={{opacity:1,y:0}}
+  initial={{opacity:0,y:-100}}
+  transition={{duration:1}}
+          
     id='homepage'
     className='scroll-fixed-page'>
       <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-800
@@ -40,7 +44,7 @@ function HomePage() {
           Web Agents Debug</motion.div>
 
       </div>
-    </section>
+    </motion.section>
   )
 }
 

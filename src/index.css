@@ -7,6 +7,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  overflow-x: hidden;
+}
+
   
   .scroll-fixed-page {
     position: fixed;
@@ -25,5 +29,6 @@
   .scroll-overlay-page2 {
     position: relative;
     z-index: 2;
+    
   }
 
