@@ -55,9 +55,11 @@ const myProjects = [
     <section 
     id="projects"
     className='bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800 text-white
-relative scroll-overlay-page2 min-h-screen pt-20'>
+relative scroll-overlay-page2 min-h-screen pt-10 '>
       
-        <div className="text-center mb-16">
+        <div className="text-center mb-16
+        mt-0
+        ">
           <motion.h2 
                     whileInView={{opacity:1,y:0}}
   initial={{opacity:0,y:-100}}
