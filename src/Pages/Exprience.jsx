@@ -2,6 +2,19 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 function Exprience() {
+
+const[repos,setRepos]=React.useState([])
+React.useEffect(()=>{
+  fetch("https://api.github.com/users/Shivang-code/repos")
+  .then((res)=>res.json())
+  .then((data)=>setRepos(data))
+  .catch((err)=>console.log(err))
+
+
+}
+,[])
+
+
   return (
     <section
     id="experience"
@@ -24,7 +37,28 @@ relative scroll-overlay-page2 min-h-screen '>
           </p>
         </div>
         
-      
+   
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {repos.map((repo) => (
+          <div
+            key={repo.id}
+            className="p-4 border rounded-lg shadow hover:shadow-lg transition"
+          >
+            <h3 className="font-semibold text-lg">{repo.name}</h3>
+            <p className="text-sm text-gray-600">
+              {repo.description || "No description available"}
+            </p>
+            <a
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 mt-2 inline-block"
+            >
+              View on GitHub
+            </a>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
