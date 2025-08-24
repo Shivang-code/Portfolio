@@ -5,9 +5,10 @@ register();
 function ProjectCards({ src, Title, Content }) {
   const [hovered, setHovered] = React.useState(false);
 
+  
   return (
     <div
-      className="relative rounded-lg mr-2 overflow-hidden h-[650px] w-[350px] transition duration-300"
+      className="relative rounded-lg overflow-hidden h-[650px] w-[450px] transition duration-300"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

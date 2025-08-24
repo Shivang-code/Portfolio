@@ -7,6 +7,7 @@ import sixthImg from "../assets/picture/raimond-klavins-uAk731NvaJo-unsplash.jpg
 import ProjectCards from "../Components/ProjectCards";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -73,10 +74,17 @@ relative scroll-overlay-page2 min-h-screen pt-10 '>
           </p>
         </div>
       <Swiper
-  spaceBetween={20}
+      modules={[Mousewheel, Pagination]}
+      direction={"horizontal"}
+       mousewheel={{
+        forceToAxis:true,
+        releaseOnEdges:true
+       }}    
+  spaceBetween={10}
   loop={true}
-  navigation
+ centeredSlides={true}
   pagination={{ clickable: true }}
+  slidesPerView={"auto"}
   breakpoints={{
     320: { // mobile
       slidesPerView: 1,
@@ -98,7 +106,8 @@ relative scroll-overlay-page2 min-h-screen pt-10 '>
 
 {
         myProjects.map((project,index)=>(
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index}
+           style={{ width: "auto" }} >
           <ProjectCards
           key={index}
           src={project.src}
