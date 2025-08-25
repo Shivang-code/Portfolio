@@ -1,6 +1,7 @@
 import React from 'react'
 import Typewriter from "typewriter-effect";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import CV from "../assets/picture/ShivangResume _MCA.pdf"
 
 
 function Home() {
@@ -32,8 +33,22 @@ function Home() {
         />
         </span>
       </div>
+      <a 
+  className='absolute z-20'
+  href={CV} 
+  download
+>
+  <button className="bg-transparentbf-[#0f172a] text-white px-6 py-3 rounded-lg hover:bg-white
+  hover:text-blue-400 transition border">
+    Resume
+  </button>
+</a>
+
+
 </div>
+
       </div>
+   
     </div>
   )
 }
