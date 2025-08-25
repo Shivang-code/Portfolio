@@ -6,9 +6,6 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-//bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800
-// transparentbf-[#0f172a]
 function Projects() {
 
 const[repos,setRepos]=useState([])
@@ -27,7 +24,12 @@ useEffect(() => {
 
   Promise.all(
     wantedRepos.map(name =>
-      fetch(`https://api.github.com/repos/Shivang-code/${name}`).then(res => res.json())
+      fetch(`https://api.github.com/repos/Shivang-code/${name}`,{
+  headers: {
+    Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`
+  }
+}
+      ).then(res => res.json())
     )
   ).then(data => setRepos(data));
 }, []);
