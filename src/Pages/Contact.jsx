@@ -16,7 +16,7 @@ relative scroll-overlay-page2 min-h-screen py-20
   initial={{opacity:0,y:-100}}
   transition={{duration:0.5}}
           className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Contact
+            Connect <span className='text-4xl md:text-5xl text-sky-400 font-extrabold'>With Me</span>
           </motion.h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Ready to work together? Let's discuss your next project
