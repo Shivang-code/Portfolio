@@ -42,19 +42,16 @@ const scrollToSection=(sectionId)=>{
         ${scrolled ? 'bg-white/10 backdrop-blur-md' : 'bg-transparent'} 
         transition-colors duration-300 fixed top-0 left-0 right-0 z-50 p-4`}>
         
-          <div className="md:flex space-x-4 text-white">
+          <div className="md:flex space-x-12 text-white text-2xl ">
             <a 
             onClick={() => scrollToSection('about')}
-            className="hover:text-gray-400">About</a>
+            className="hover:underline hover:text-gray-400">About</a>
             <a 
             onClick={() => scrollToSection('projects')}
-            className="hover:text-gray-400">Projects</a>
+            className="hover:underline hover:text-gray-400">Projects</a>
             <a 
             onClick={() => scrollToSection('contact')}
-            className="hover:text-gray-400">Contact</a>
-          </div>
-          <div className="md:hidden">
-            <Menu className="w-6 h-6 cursor-pointer" />
+            className="hover:underline hover:text-gray-400">Contact</a>
           </div>
         </div>
       </nav>
