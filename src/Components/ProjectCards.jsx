@@ -30,14 +30,18 @@ function ProjectCards({Title, Content,url,image}) {
           <h3 className="text-2xl font-bold">{Title}</h3>
 
           <p className="text-lg mt-2">{Content}</p>
-           <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 mt-2 inline-block"
-            >
-              View on GitHub
-            </a>
+         <a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-4 py-2 mt-4 inline-block rounded-xl
+             backdrop-blur-md bg-white/10 border border-white/20
+             text-white font-medium shadow-lg hover:bg-white/20
+             hover:scale-105 transition-all duration-300"
+>
+  View on GitHub
+</a>
+
         </div>
       )}
     </div>
