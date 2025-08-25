@@ -15,7 +15,7 @@ isLast=false
       {/* Timeline line */}
       <div className="flex flex-col items-center">
         <div className="w-4 h-4 bg-gradient-primary rounded-full border-4 border-background shadow-glow z-10" />
-      {!isLast && <div className="w-0.5 flex-1 bg-border mt-2" />}
+      {!isLast && <div className="w-0.5 flex-1 bg-white mt-2" />}
 
       </div>
       
@@ -26,6 +26,8 @@ isLast=false
             <div>
               <h3 className="text-xl font-bold text-foreground">{role}</h3>
               <p className="text-lg font-semibold text-primary">{company}</p>
+              <p className="text-xs font-semibold text-primary">{type}</p>
+
             </div>
             <span className="text-sm font-medium text-muted-foreground bg-muted px-3 py-1 rounded-full">
               {duration}

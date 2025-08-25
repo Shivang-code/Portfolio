@@ -49,7 +49,7 @@ relative scroll-overlay-page2 min-h-screen py-20
             My Skills
           </motion.h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
+            Technologies and Tools I use to bring ideas to life
           </p>
         </div>
 
@@ -71,7 +71,8 @@ relative scroll-overlay-page2 min-h-screen py-20
               
               <div className="w-full bg-slate-700 rounded-full h-2">
                 <div
-                  className="bg-white h-2 rounded-full transition-all duration-1000 ease-out"
+                  className="bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-500
+ h-2 rounded-full transition-all duration-1000 ease-out"
                   style={{ width: `${skill.percentage}%` }}
                 ></div>
               </div>

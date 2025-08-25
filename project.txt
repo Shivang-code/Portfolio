@@ -1,4 +1,4 @@
-          const[repos,setRepos]=React.useState([])
+const[repos,setRepos]=React.useState([])
 React.useEffect(()=>{
   fetch("https://api.github.com/users/Shivang-code/repos")
   .then((res)=>res.json())
@@ -33,3 +33,36 @@ React.useEffect(()=>{
           </div>
         ))}
       </div>
+
+      (
+        <div className="absolute inset-0 flex flex-col text-white bg-black/40 px-4
+        justify-end py-6 transition duration-300
+        h-[650px] w-[450px]
+        ">
+          <h3 className="text-2xl font-bold">{Title}</h3>
+          <p className="text-lg mt-2">{Content}</p>
+        </div>
+      )
+
+
+const projects = [
+  "ai_imageGenerator",
+  "BloggingApp",
+  "contextapiLocal",
+  "ExpenseTracker",
+  "MarkDown",
+  "NetflixClone",
+  "passwordGen",
+  "PhotoGallery",
+  "Portfolio",
+  "Portfolio2",
+  "Portfolio3",
+  "QrCode",
+  "ReciepeApp",
+  "Redux",
+  "studentCrud",
+  "Todo",
+  "url_shortner"
+];
+
+console.log(projects);

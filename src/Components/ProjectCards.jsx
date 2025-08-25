@@ -2,20 +2,20 @@ import React from 'react'
 import { register } from 'swiper/element/bundle';
 register();
 
-function ProjectCards({ src, Title, Content }) {
-  const [hovered, setHovered] = React.useState(false);
-
-  
+function ProjectCards({Title, Content,url,image}) {
+  const [hovered, setHovered] = React.useState(false);  
   return (
     <div
-      className="relative rounded-lg overflow-hidden h-[650px] w-[450px] transition duration-300"
+      className=" rounded-lg overflow-hidden h-[650px] w-[450px] transition duration-300 
+      "
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {/* Image */}
       <img
-        src={src}
-        alt=""
+        src={image}
+        alt="No Image"
+        onError={(e)=>(e.currentTarget.src="../assets/picture/diego-ph-fIq0tET6llw-unsplash.jpg")}
         className={`object-cover shadow-lg h-[650px] w-full transition duration-300 ${
           hovered ? "blur-md" : ""
         }`}
@@ -25,9 +25,19 @@ function ProjectCards({ src, Title, Content }) {
       {hovered && (
         <div className="absolute inset-0 flex flex-col text-white bg-black/40 px-4
         justify-end py-6 transition duration-300
+        h-[650px] w-[450px]
         ">
           <h3 className="text-2xl font-bold">{Title}</h3>
+
           <p className="text-lg mt-2">{Content}</p>
+           <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 mt-2 inline-block"
+            >
+              View on GitHub
+            </a>
         </div>
       )}
     </div>

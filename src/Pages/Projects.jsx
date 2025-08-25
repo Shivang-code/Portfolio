@@ -1,10 +1,5 @@
-import firstImg from "../assets/picture/annie-spratt-fbAnIjhrOL4-unsplash.jpg"
-import SecondImg from "../assets/picture/diego-ph-fIq0tET6llw-unsplash.jpg"
-import thirdImg from "../assets/picture/matthew-henry-U5rMrSI7Pn4-unsplash.jpg"
-import fourthImg from "../assets/picture/florian-klauer-mk7D-4UCfmg-unsplash.jpg"
-import fifthImg from "../assets/picture/mark-adriane-muS2RraYRuQ-unsplash.jpg"
-import sixthImg from "../assets/picture/raimond-klavins-uAk731NvaJo-unsplash.jpg"
 import ProjectCards from "../Components/ProjectCards";
+import { useState ,useEffect} from "react"
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper/modules";
@@ -16,41 +11,26 @@ import "swiper/css/pagination";
 // transparentbf-[#0f172a]
 function Projects() {
 
-const myProjects = [
-  {
-    src: firstImg,
-    Title: "First Project",
-    Content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?"
-  },
-  {
-    src: SecondImg,
-    Title: "Second Project",
-    Content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?"
-  },
-  {
-    src: thirdImg,
-    Title: "Third Project",
-    Content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?"
-  },
-  {
-    src: fourthImg,
-    Title: "Fourth Project",
-    Content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?"
-  },
-  {
-    src: fifthImg,
-    Title: "Fifth Project",
-    Content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?"
-  },
-  {
-    src: sixthImg,
-    Title: "Sixth Project",
-    Content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minima?"
-  }
+const[repos,setRepos]=useState([])
+
+useEffect(() => {
+  const wantedRepos = [
+  "BloggingApp",
+  "ExpenseTracker",
+  "MarkDown",
+  "NetflixClone",
+  "PhotoGallery",
+  "ReciepeApp",
+  "studentCrud",
+ 
 ];
 
-
-
+  Promise.all(
+    wantedRepos.map(name =>
+      fetch(`https://api.github.com/repos/Shivang-code/${name}`).then(res => res.json())
+    )
+  ).then(data => setRepos(data));
+}, []);
 
   return (
     <section 
@@ -73,6 +53,7 @@ relative scroll-overlay-page2 min-h-screen pt-10 '>
             Projects I have worked on and am currently working on.
           </p>
         </div>
+       
       <Swiper
       modules={[Mousewheel, Pagination]}
       direction={"horizontal"}
@@ -80,39 +61,25 @@ relative scroll-overlay-page2 min-h-screen pt-10 '>
         forceToAxis:true,
         releaseOnEdges:true
        }}    
-  spaceBetween={10}
+  spaceBetween={20}
   loop={true}
  centeredSlides={true}
+ slidesPerView="auto"
   pagination={{ clickable: true }}
-  slidesPerView={"auto"}
-  breakpoints={{
-    320: { // mobile
-      slidesPerView: 1,
-    },
-    640: { // small tablets
-      slidesPerView: 1,
-    },
-    768: { // tablets
-      slidesPerView: 2,
-    },
-    1024: { // laptops
-      slidesPerView: 3,
-    },
-    1280: { // large desktops
-      slidesPerView: 3,
-    },
-  }}
+
       >
 
 {
-        myProjects.map((project,index)=>(
+        repos.map((repo,index)=>(
             <SwiperSlide key={index}
-           style={{ width: "auto" }} >
+            style={{ width: "450px" }}
+            >
           <ProjectCards
-          key={index}
-          src={project.src}
-          Title={project.Title}
-          Content={project.Content}
+          Title={repo.name}
+          Content={repo.description}
+          url={repo.html_url}
+          image={`https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/preview.png`}
+          
           />
           </SwiperSlide>
         ))
@@ -122,7 +89,7 @@ relative scroll-overlay-page2 min-h-screen pt-10 '>
  
    </Swiper>
           
-              
+          
     </section>
   )
 }

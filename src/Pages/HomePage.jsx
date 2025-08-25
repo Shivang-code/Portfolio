@@ -33,7 +33,7 @@ function HomePage() {
 
         <Home />
 
-        <div className='absolute right-4 top-1/2 -translate-y-1/2 flex flex-col justify-center items-center'>
+        <div className='absolute right-4 top-1/2 -translate-y-1/2 flex flex-col justify-center items-center z-10'>
           <Links />
 
 
