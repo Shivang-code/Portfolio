@@ -42,7 +42,7 @@ const scrollToSection=(sectionId)=>{
         ${scrolled ? 'bg-white/10 backdrop-blur-md' : 'bg-transparent'} 
         transition-colors duration-300 fixed top-0 left-0 right-0 z-50 p-4`}>
         
-          <div className="md:flex space-x-12 text-white text-2xl ">
+          <div className="md:flex space-x-12 text-white text-2xl md:text-2xl sm:text-lg">
             <a 
             onClick={() => scrollToSection('about')}
             className="hover:underline hover:text-gray-400">About</a>
