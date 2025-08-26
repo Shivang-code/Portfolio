@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 function ExperienceCard({
 company,
@@ -15,7 +16,7 @@ isLast=false
       {/* Timeline line */}
       <div className="flex flex-col items-center">
         <div className="w-4 h-4 bg-gradient-primary rounded-full border-4 border-background shadow-glow z-10" />
-      {!isLast && <div className="w-0.5 flex-1 bg-white mt-2" />}
+      {!isLast && <div className="w-0.5 flex-1 bg-white mt-0" />}
 
       </div>
       

@@ -10,7 +10,9 @@
 html, body {
   overflow-x: hidden;
 }
-
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
   
   .scroll-fixed-page {
     position: fixed;

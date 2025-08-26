@@ -1,10 +1,52 @@
 import React from 'react'
 import { Code, Palette, Database, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {Autoplay} from "swiper/modules";
+import "swiper/css";
+import freecodecamp from '../assets/Certificate/freecodecamp_page-0001.jpg'
+import java_basic from '../assets/Certificate/java_basic certificate_page-0001.jpg'
+import software_developement from '../assets/Certificate/L3NcyCoAjLno9d3T9_gCW7Xki5Y3vNpBmnn_TkTA7AxjwDhiPFqqj_1731168190348_completion_certificate_page-0001.jpg'
+import  data_ana from '../assets/Certificate/m7W4GMqeT3bh9Nb2c_KPMG AU_TkTA7AxjwDhiPFqqj_1693763908331_completion_certificate (1)_page-0001.jpg'
+import data_visual from "../assets/Certificate/MyXvBcppsW2FkNYCX_Tata_TkTA7AxjwDhiPFqqj_1693829403144_completion_certificate (1)_page-0001.jpg"
+import python from '../assets/Certificate/python_basic certificate_page-0001.jpg'
+import sql_basic from '../assets/Certificate/sql_basic certificate_page-0001.jpg'
+import sql_inter from "../assets/Certificate/sql_intermediate certificate_page-0001.jpg"
 
 
 
 function Skills() {
+
+const certificate=[
+  {
+    src:freecodecamp
+  },
+  {
+    src:java_basic
+  },
+  {
+    src:software_developement
+  },
+  {
+    src:python
+  },
+  {
+    src:data_ana
+  },
+  {
+    src:data_visual
+  },
+  {
+    src:sql_basic
+  },
+  {
+    src:sql_inter
+  }
+]
+
+
+
+
 
 
   const skills = [
@@ -87,6 +129,40 @@ relative scroll-overlay-page2 min-h-screen py-20
         </div>
       </div>
 
+<div className="mt-12 w-full flex justify-center">
+      <Swiper
+      modules={[Autoplay]}   
+  spaceBetween={20}
+  loop={true}
+ slidesPerView="auto"
+ autoplay={{
+  delay:0,
+  disableOnInteraction:false
+ }}
+ speed={3000}
+
+      >
+
+{
+  certificate.map((data,index)=>(
+  <SwiperSlide
+  key={{index}}
+  style={{width:"300px"}}>
+  <div className='bg-blue-800 border border-red-300 h-[200px] w-[300px]'>
+    <img src={data.src} alt="No Image" 
+    className='object-cover'
+    />
+  </div>
+  </SwiperSlide>
+  ))
+}
+
+
+       
+  
+  
+  </Swiper>
+</div>
 
       
     </section>

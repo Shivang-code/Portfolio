@@ -1,6 +1,5 @@
 import React from 'react'
-import { register } from 'swiper/element/bundle';
-register();
+
 
 function ProjectCards({Title, Content,url,image}) {
   const [hovered, setHovered] = React.useState(false);  
