@@ -19,8 +19,9 @@ relative scroll-overlay-page min-h-screen'>
         className='w-1/2  h-[100%] overflow-hidden relative'>
 <img src={hover?normalImg:myImage} alt="no img" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='h-full w-full object-cover' />
         </motion.div>
-        <div className='w-1/2 flex text-white
-        justify-center items-start  flex-col pl-20 pr-5
+        <div className='w-full sm:w-1/2 flex text-white
+        justify-center items-start  flex-col px-5 sm:px-10 md:px-20 md:flex md:justify-center md:items-start
+        sm:flex sm:justify-center sm:items-center
         '>
 
   <motion.h2 
@@ -28,7 +29,7 @@ relative scroll-overlay-page min-h-screen'>
   initial={{opacity:0,x:100}}
   transition={{duration:1}}
   
-  className='text-xl text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3 rounded-full'>About Me</motion.h2>
+  className=' text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3  md:text-lg sm:text-sm rounded-full'>About Me</motion.h2>
   
 
           <motion.p 
@@ -36,7 +37,7 @@ relative scroll-overlay-page min-h-screen'>
         initial={{opacity:0,x:100}}
         transition={{duration:1}}
         
-          className='text-lg'>
+          className='text-lg md:text-lg sm:text-sm'>
             Hello! I'm Shivang, a passionate Full Stack Developer with a keen interest in building dynamic and responsive web applications. I thrive on challenges and love to learn new technologies. My journey in web development has equipped me with a diverse skill set, enabling me to create seamless user experiences and robust back-end solutions.
           </motion.p>
         </div>
