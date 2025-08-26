@@ -69,12 +69,15 @@ relative scroll-overlay-page2 min-h-screen py-20
                 </div>
               </div>
               
-              <div className="w-full bg-slate-700 rounded-full h-2">
-                <div
+              <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                <motion.div 
+                whileInView={{opacity:1,x:0}}
+  initial={{opacity:0,x:-100}}
+  transition={{duration:0.5}}
                   className="bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-500
  h-2 rounded-full transition-all duration-1000 ease-out"
                   style={{ width: `${skill.percentage}%` }}
-                ></div>
+                ></motion.div>
               </div>
               <div className="text-right mt-2">
                 <span className="text-sm text-gray-400">{skill.percentage}%</span>
