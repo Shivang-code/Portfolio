@@ -10,7 +10,7 @@ const experiences = [
 company:"Algocept",
 role:"Web Developer Intern",
 type:"Remote Internship",
-duration:"May 2025 - June 2025",
+duration:"May 2025 - July 2025",
 description:"Worked on developing and maintaining web applications using React.js and Node.js. Collaborated with the design team to implement user-friendly interfaces and improve website performance.",
 skills:["React.js","Node.js","JavaScript","HTML","CSS"]
   },
