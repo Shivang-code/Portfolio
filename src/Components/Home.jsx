@@ -11,7 +11,7 @@ function Home() {
     className='flex flex-row justify-center items-center h-screen relative'>
       <div className='p-8 mt-14 flex flex-col justify-center items-center text-xl'>
 <div className='md:text-4xl sm:text-2xl'>
-        <h1 className="md:text-6xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 bg-clip-text text-transparent p-3">
+        <h1 className="text-6xl  font-extrabold bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 bg-clip-text text-transparent p-3">
          Shivang Tyagi,
       </h1>
 
