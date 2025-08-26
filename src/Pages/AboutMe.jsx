@@ -16,12 +16,16 @@ relative scroll-overlay-page min-h-screen'>
           whileInView={{opacity:1,x:0}}
   initial={{opacity:0,x:-100}}
   transition={{duration:1}}
-        className='w-1/2  h-[100%] overflow-hidden relative'>
+        className='w-full sm:w-1/2 h-[100%] overflow-hidden
+        md:flex md:justify-center md:items-start
+        sm:flex sm:justify-center sm:items-center
+        '>
 <img src={hover?normalImg:myImage} alt="no img" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='h-full w-full object-cover' />
         </motion.div>
-        <div className='w-full sm:w-1/2 flex text-white
-        justify-center items-start  flex-col px-5 sm:px-10 md:px-20 md:flex md:justify-center md:items-start
-        sm:flex sm:justify-center sm:items-center
+        <div className='w-full sm:w-1/2 flex text-white py-10 mt-10
+
+        justify-start items-start  flex-col px-5 sm:px-10 md:px-20 md:flex md:justify-start md:items-start
+        sm:flex sm:justify-start sm:items-center
         '>
 
   <motion.h2 
@@ -29,7 +33,7 @@ relative scroll-overlay-page min-h-screen'>
   initial={{opacity:0,x:100}}
   transition={{duration:1}}
   
-  className=' text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3  md:text-lg sm:text-sm rounded-full'>About Me</motion.h2>
+  className=' text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3  md:text-3xl sm:text-sm rounded-full'>About Me</motion.h2>
   
 
           <motion.p 
@@ -37,7 +41,7 @@ relative scroll-overlay-page min-h-screen'>
         initial={{opacity:0,x:100}}
         transition={{duration:1}}
         
-          className='text-lg md:text-lg sm:text-sm'>
+          className='text-lg md:text-xl sm:text-sm'>
             Hello! I'm Shivang, a passionate Full Stack Developer with a keen interest in building dynamic and responsive web applications. I thrive on challenges and love to learn new technologies. My journey in web development has equipped me with a diverse skill set, enabling me to create seamless user experiences and robust back-end solutions.
           </motion.p>
         </div>
