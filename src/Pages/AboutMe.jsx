@@ -16,7 +16,7 @@ relative scroll-overlay-page min-h-screen'>
           whileInView={{opacity:1,x:0}}
   initial={{opacity:0,x:-100}}
   transition={{duration:1}}
-        className='w-full md:w-1/2 h-[50vh] md:h-full overflow-hidden flex justify-center items-center'>
+        className='w-full md:w-1/2 h-[70vh] md:h-full overflow-hidden flex justify-center items-center'>
 <img src={hover?normalImg:myImage} alt="no img" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='h-full w-full object-cover' />
         </motion.div>
         <div className='w-full md:w-1/2 flex flex-col text-white py-10 px-5 sm:px-10 md:px-20 justify-center items-start'>
