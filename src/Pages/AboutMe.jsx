@@ -11,29 +11,22 @@ function AboutMe() {
     <section id='about'
     className='bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800
 relative scroll-overlay-page min-h-screen'>
-      <div className='flex flex-row  h-[100vh]'>
+      <div className='flex flex-col md:flex-row h-auto md:h-[100vh]'>
         <motion.div 
           whileInView={{opacity:1,x:0}}
   initial={{opacity:0,x:-100}}
   transition={{duration:1}}
-        className='w-full sm:w-1/2 h-[100%] overflow-hidden
-        md:flex md:justify-center md:items-start
-        sm:flex sm:justify-center sm:items-center
-        '>
+        className='w-full md:w-1/2 h-[50vh] md:h-full overflow-hidden flex justify-center items-center'>
 <img src={hover?normalImg:myImage} alt="no img" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='h-full w-full object-cover' />
         </motion.div>
-        <div className='w-full sm:w-1/2 flex text-white py-10 mt-10
-
-        justify-start items-start  flex-col px-5 sm:px-10 md:px-20 md:flex md:justify-start md:items-start
-        sm:flex sm:justify-start sm:items-center
-        '>
+        <div className='w-full md:w-1/2 flex flex-col text-white py-10 px-5 sm:px-10 md:px-20 justify-center items-start'>
 
   <motion.h2 
   whileInView={{opacity:1,x:0}}
   initial={{opacity:0,x:100}}
   transition={{duration:1}}
   
-  className=' text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3  md:text-3xl sm:text-sm rounded-full'>About Me</motion.h2>
+  className=' text-base sm:text-lg md:text-2xl text-sky-400 font-bold mb-5 border-2 border-sky-400 p-3 rounded-full'>About Me</motion.h2>
   
 
           <motion.p 
@@ -41,7 +34,7 @@ relative scroll-overlay-page min-h-screen'>
         initial={{opacity:0,x:100}}
         transition={{duration:1}}
         
-          className='text-lg md:text-xl sm:text-sm'>
+          className='text-base sm:text-lg md:text-xl leading-relaxed'>
             Hello! I'm Shivang, a passionate Full Stack Developer with a keen interest in building dynamic and responsive web applications. I thrive on challenges and love to learn new technologies. My journey in web development has equipped me with a diverse skill set, enabling me to create seamless user experiences and robust back-end solutions.
           </motion.p>
         </div>
