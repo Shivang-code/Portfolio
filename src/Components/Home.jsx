@@ -1,7 +1,7 @@
 import React from 'react'
 import Typewriter from "typewriter-effect";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import CV from "../assets/picture/ShivangResume _MCA.pdf"
+import CV from "../assets/picture/Shivang_Tyagi_MCA_Resume .pdf"
 
 
 function Home() {
